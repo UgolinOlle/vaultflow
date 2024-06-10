@@ -6,8 +6,6 @@ import AnimatedCursor from 'react-animated-cursor';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { Toaster, toast } from 'sonner';
 
-import { ThemeProvider } from './theme';
-
 export default function GlobalProviders({ children }: { children: ReactNode }) {
   // -- Variables
   useHotkeys('mod+/', () => toast.dismiss());
@@ -31,11 +29,9 @@ export default function GlobalProviders({ children }: { children: ReactNode }) {
         }}
       />
       <Toaster richColors position="top-center" />
-      <ThemeProvider>
-        <Theme className="w-full h-full flex flex-col justify-between items-center gap-[80px]">
-          {children}
-        </Theme>
-      </ThemeProvider>
+      <Theme className="w-full h-full flex flex-col justify-between items-center gap-[80px]">
+        {children}
+      </Theme>
     </>
   );
 }
