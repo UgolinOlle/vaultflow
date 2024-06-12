@@ -1,16 +1,17 @@
-import { VariantProps, cva } from 'class-variance-authority';
+import { VariantProps, cva } from "class-variance-authority";
 
 // -- Heading variants
-const headingVariants = cva('font-[500] text-4xl leading-[80px]', {
+const headingVariants = cva("font-bold", {
   variants: {
     variant: {
-      h1: 'text-[80px]',
-      h2: 'text-[48px]',
-      h3: 'text-[32px]',
+      h1: "text-[80px] font-bold leading-[80px]",
+      h2: "text-[48px] font-bold",
+      h3: "text-[32px]",
+      h4: "text-[24px]",
     },
   },
   defaultVariants: {
-    variant: 'h1',
+    variant: "h1",
   },
 });
 

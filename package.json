@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "next start",
-    "start:dev": "next dev",
+    "start:dev": "clear && next dev",
     "build": "next build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write ."
@@ -47,5 +47,7 @@
   "ct3aMetadata": {
     "initVersion": "7.34.0"
   },
-  "packageManager": "yarn@1.22.22"
+  "packageManager": "yarn@1.22.22",
+  "license": "MIT"
 }
+

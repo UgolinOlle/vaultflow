@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import { Button } from './ui/button';
+import { Button } from "./ui/button";
 
 /**
  * @function Navbar
@@ -12,33 +12,41 @@ import { Button } from './ui/button';
 export const Navbar: React.FC = (): React.ReactElement => {
   // -- Render
   return (
-    <nav className="flex items-center justify-between w-full bg-black/50 backdrop-filter backdrop-blur-lg rounded-[25px] shadow-md py-[20px] px-[40px] mx-[30px] my-[20px]">
-      <div className="flex items-center">
-        <Link
-          href="/"
-          className="text-[22px] font-bold flex items-center gap-[10px]"
+    <header className="mx-5 my-5 w-full h-20 relative">
+      <nav className="fixed top-5 left-5 right-5 flex items-center justify-between bg-black/50 backdrop-filter backdrop-blur-lg rounded-3xl shadow-md py-5 px-10 z-10">
+        <div className="flex items-center">
+          <Link href="/" className="text-xl font-bold flex items-center gap-3">
+            <Image src="/logo.png" alt="VaultFlow" width={22} height={22} />
+            VaultFlow
+          </Link>
+        </div>
+        <div className="flex items-center space-x-4">
+          <Link
+            href="/"
+            className="text-md transition-all ease-in-out hover:underline hover:underline-offset-4"
+          >
+            Features
+          </Link>
+          <Link
+            href="/"
+            className="text-md transition-all ease-in-out hover:underline hover:underline-offset-4"
+          >
+            Pricing
+          </Link>
+          <Link
+            href="/"
+            className="text-md transition-all ease-in-out hover:underline hover:underline-offset-4"
+          >
+            About us
+          </Link>
+        </div>
+        <Button
+          size="small"
+          className="rounded-full text-md font-normal leading-7"
         >
-          <Image src="/logo.png" alt="VaultFlow" width={22} height={22} />
-          VaultFlow
-        </Link>
-      </div>
-      <div className="flex items-center space-x-4">
-        <Link href="/" className="text-[16px]">
-          Features
-        </Link>
-        <Link href="/" className="text-[16px]">
-          Pricing
-        </Link>
-        <Link href="/" className="text-[16px]">
-          About us
-        </Link>
-      </div>
-      <Button
-        size="small"
-        className="rounded-full text-[16px] font-normal leading-[24px]"
-      >
-        Download the app
-      </Button>
-    </nav>
+          Download the app
+        </Button>
+      </nav>
+    </header>
   );
 };

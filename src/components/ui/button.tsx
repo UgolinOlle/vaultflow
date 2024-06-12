@@ -2,30 +2,25 @@ import { VariantProps, cva } from 'class-variance-authority';
 import { cn } from '~/lib/utils';
 
 // -- Button variants
-const buttonVariants = cva(
-  'text-md font-medium py-2 px-4 rounded-md shadow-sm',
-  {
-    variants: {
-      variant: {
-        default: 'bg-white text-black',
-        outline: 'bg-transparent border text-white border-white',
-        link: 'text-black underline underline-offset-4',
-      },
-      size: {
-        default:
-          'text-md md:text-lg lg:text-xl px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4',
-        small:
-          'text-sm md:text-md lg:text-lg px-3 py-1 md:px-4 md:py-2 lg:px-6 lg:py-3',
-        large:
-          'text-lg md:text-xl lg:text-2xl px-5 py-3 md:px-6 md:py-4 lg:px-8 lg:py-5',
-      },
+const buttonVariants = cva('text-md font-medium rounded-md shadow-sm', {
+  variants: {
+    variant: {
+      default:
+        'bg-white text-black transition-all ease-in-out duration-200 hover:bg-purplePrimary hover:text-white',
+      outline: 'bg-transparent border text-white border-white',
+      link: 'text-black underline underline-offset-4',
     },
-    defaultVariants: {
-      variant: 'default',
-      size: 'default',
+    size: {
+      default: 'text-md md:text-lg lg:text-xl px-6 py-2',
+      small: 'text-sm md:text-md px-6 py-1',
+      large: 'text-lg px-10 py-2',
     },
-  }
-);
+  },
+  defaultVariants: {
+    variant: 'default',
+    size: 'default',
+  },
+});
 
 /**
  * @interface ButtonProps
