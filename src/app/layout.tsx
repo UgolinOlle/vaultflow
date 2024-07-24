@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="flex items-center justify-center w-screen">
-      <body className="relative flex flex-col antialiased justify-between items-center gap-14 mx-auto text-white w-full bg-[#0B0121]">
+    <html lang="en" className="flex items-center justify-center w-full">
+      <body className="relative flex flex-col antialiased justify-between items-center gap-14 mx-auto text-white bg-[#0B0121] w-full">
         <GlobalProviders>
           <Navbar />
           <main className="mt-6 flex flex-col justify-between items-center w-full">

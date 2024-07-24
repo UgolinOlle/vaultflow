@@ -7,8 +7,7 @@ import { Icons } from '~/lib/icons';
  * @returns {JSX.Element} JSX.Element
  * @exports CompanyList
  */
-export const CompanyList: React.FC = (): JSX.Element => {
-  // -- Render
+export const CompanyList: React.FC = (): JSX.Element => { // -- Render
   return (
     <ul className="flex flex-row gap-6 items-center w-full justify-center">
       <li>

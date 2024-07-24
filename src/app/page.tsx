@@ -9,7 +9,7 @@ import { Heading } from "~/components/ui/heading";
 export default function HomePage() {
   return (
     <div className="flex flex-col items-center justify-center w-[90%] mb-10 gap-[80px]">
-      <div className="absolute inset-0 bg-hero-bg top-0 left-0 w-screen -z-10 bg-contain bg-no-repeat" />
+      <div className="absolute inset-0 bg-hero-bg top-0 left-0 w-full -z-10 bg-contain bg-no-repeat" />
       <section className="flex flex-col items-center w-[960px] gap-[24px] py-[60px]">
         <Button variant="outline" size="large" className="mt-6 rounded-full">
           {`We just raised $20M in Series B. Learn more`}

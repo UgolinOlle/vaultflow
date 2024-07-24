@@ -11,12 +11,11 @@ import { Heading } from "./ui/heading";
  * @exports Footer
  */
 export const Footer: React.FC = (): React.ReactElement => {
-  // -- Render
   return (
-    <footer className="pb-10 pt-4 text-white w-[90%] px-5">
+    <footer className="pb-10 pt-4 text-white w-full px-5">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div className="flex items-stretch gap-16">
-          <div className="flex flex-col justify-between items-start gap-8 w-1/3">
+        <div className="flex flex-col md:flex-row items-stretch gap-16">
+          <div className="flex flex-col justify-between items-start gap-8 w-full md:w-1/3">
             <div>
               <Heading
                 variant="h4"
@@ -43,7 +42,7 @@ export const Footer: React.FC = (): React.ReactElement => {
               © 2023 Vaultflow. All Rights Reserved.
             </p>
           </div>
-          <div className="flex flex-col items-start gap-8 w-1/3">
+          <div className="flex flex-col justify-between items-start gap-8 w-full md:w-1/3">
             <div>
               <Heading
                 variant="h4"
@@ -69,7 +68,7 @@ export const Footer: React.FC = (): React.ReactElement => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col justify-end items-end w-1/3">
+          <div className="flex flex-col justify-end items-end w-full md:w-1/3">
             <div className="mt-auto">
               <Link
                 href="/"
